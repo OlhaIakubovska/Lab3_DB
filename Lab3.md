@@ -281,17 +281,10 @@ UNION ALL SELECT 'Enrollment', COUNT(*) FROM Enrollment
 UNION ALL SELECT 'Review', COUNT(*) FROM Review;
 ```
 
-Очікувані результати після всіх операцій:
+Скріншот результату після всіх операцій:
 
-| Таблиця | Початково | Після Lab 3 |
-|---|---|---|
-| User | 6 | 6 |
-| Student | 3 | 3 |
-| Instructor | 3 | 3 |
-| Course | 5 | 5 |
-| Module | 12 | 12 |
-| Enrollment | 6 | 6 |
-| Review | 5 | 4 |
+<img width="682" height="566" alt="image" src="https://github.com/user-attachments/assets/c8c5dbb3-3639-4165-8c48-6ccec44416f6" />
+
 
 > Таблиця Review зменшилась на 1 рядок через видалення ReviewID = 5 у розділі DELETE.
 
