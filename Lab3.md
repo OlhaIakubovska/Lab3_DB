@@ -71,6 +71,15 @@ WHERE UserID = 2;
 <img width="1568" height="550" alt="image" src="https://github.com/user-attachments/assets/003726f2-de9f-4d8a-8f01-a50b3bb20c4a" />
 <img width="725" height="282" alt="image" src="https://github.com/user-attachments/assets/89a6ae1f-96e0-4391-850f-be659a8bfa53" />
 
+### 2.4. Видалення даних (DELETE-запити)
+Продемонстровано роботу механізму видалення об'єктів. Зокрема, видалення користувача з урахуванням каскадних зв'язків.
+
+**Запит 4.5 (Повне видалення користувача):**
+```sql
+DELETE FROM "User"
+WHERE Email = 's.petrenko@ukr.net';
+```
+
 
 
 
