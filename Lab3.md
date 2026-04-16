@@ -46,10 +46,11 @@ FROM Course
 WHERE Price BETWEEN 400 AND 800;
 
 ### 2.2. Додавання даних (INSERT)
-Імітація реєстрації нового користувача та його активності на платформі.
--- Реєстрація нового користувача
-INSERT INTO "User" (FirstName, LastName, Email, Password) 
-VALUES ('Артем', 'Петренко', 'artem.p@kpi.ua', 'secure_hash_7');
+--- 2.1 Додати нового користувача
+INSERT INTO "User" (FirstName, LastName, Email, Password, RegistrationDate)
+VALUES ('Сергій', 'Петренко', 's.petrenko@gmail.com', 'hashed_pass_7', CURRENT_DATE);
+<img width="1163" height="381" alt="image" src="https://github.com/user-attachments/assets/99e2835d-46df-41ec-ba05-8ef2e64a7314" />
+
 
 -- Призначення ролі студента
 INSERT INTO Student (UserID, AcademicLevel, TotalPoints) 
