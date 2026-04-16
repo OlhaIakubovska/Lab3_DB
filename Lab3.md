@@ -9,7 +9,7 @@
 Набуття практичних навичок роботи з SQL-запитами для маніпуляції даними (DML) у середовищі PostgreSQL. Навчитися виконувати вибірку даних (SELECT) з використанням об'єднань, а також операції додавання (INSERT), оновлення (UPDATE) та видалення (DELETE) записів з дотриманням цілісності бази даних.
 
 ## 2. Хід роботи
----
+
 ### 2.1. Вибірка даних (SELECT-запити)
 Було розроблено та протестовано 10 запитів різної складності для отримання інформації з таблиць "User", "Student", "Course", "Enrollment" тощо.
 
@@ -33,7 +33,7 @@ WHERE s.TotalPoints > 100
 ORDER BY s.TotalPoints DESC;
 ```
 <img width="1256" height="274" alt="image" src="https://github.com/user-attachments/assets/17bb4d0d-66a2-46da-9836-60b500b7c2da" />
----
+
 ### 2.2. Додавання даних (INSERT-запити)
 Було реалізовано сценарій створення нового профілю користувача та його подальшої реєстрації на платформі.
 
@@ -50,12 +50,25 @@ VALUES ((SELECT UserID FROM "User" WHERE Email = 's.petrenko@gmail.com'), 3, CUR
 
 ```
 <img width="1163" height="381" alt="Screenshot 2026-04-16 173104" src="https://github.com/user-attachments/assets/b1a935a9-c91e-4f5a-83b2-1bca574cc026" />
----
+
 <img width="1048" height="404" alt="image" src="https://github.com/user-attachments/assets/90f69543-ae35-4b98-9869-3d85c48e0139" />
----
+
 <img width="1517" height="530" alt="image" src="https://github.com/user-attachments/assets/7ade5920-1f13-4135-9ec7-5e205051e8f3" />
----
-### 2.2. Додавання даних (INSERT-запити)
-Було реалізовано сценарій створення нового профілю користувача та його подальшої реєстрації на платформі.
+
+### 2.3. Оновлення даних (UPDATE-запити)
+Було проведено симуляцію навчального процесу через оновлення прогресу та нарахування балів.
+
+**Запит 3.2 - 3.3 (Завершення курсу студентом):**
+```sql
+UPDATE Enrollment
+SET Progress = 100.00, Status = 'Completed'
+WHERE StudentID = 2 AND CourseID = 1;
+
+UPDATE Student
+SET TotalPoints = TotalPoints + 50
+WHERE UserID = 2;
+```
+<img width="1568" height="550" alt="image" src="https://github.com/user-attachments/assets/003726f2-de9f-4d8a-8f01-a50b3bb20c4a" />
+
 
 
