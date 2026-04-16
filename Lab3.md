@@ -44,6 +44,10 @@ VALUES ('Сергій', 'Петренко', 's.petrenko@gmail.com', 'hashed_pass
 
 INSERT INTO Student (UserID, AcademicLevel, TotalPoints)
 VALUES ((SELECT UserID FROM "User" WHERE Email = 's.petrenko@gmail.com'), 'магістр', 0);
+
+INSERT INTO Enrollment (StudentID, CourseID, EnrollDate, Progress, Status)
+VALUES ((SELECT UserID FROM "User" WHERE Email = 's.petrenko@gmail.com'), 3, CURRENT_DATE, 0, 'Active');
+
 ```
 <img width="1163" height="381" alt="Screenshot 2026-04-16 173104" src="https://github.com/user-attachments/assets/b1a935a9-c91e-4f5a-83b2-1bca574cc026" />
 <img width="1048" height="404" alt="image" src="https://github.com/user-attachments/assets/90f69543-ae35-4b98-9869-3d85c48e0139" />
