@@ -21,3 +21,6 @@ FROM Course c
 JOIN Instructor i ON c.InstructorID = i.UserID
 JOIN "User" u ON i.UserID = u.UserID
 ORDER BY c.Price DESC;
+```
+<img width="578" height="300" alt="image" src="https://github.com/user-attachments/assets/655fd882-c735-44b5-a17a-8bd5b9949c26" />
+
